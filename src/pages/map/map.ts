@@ -16,17 +16,18 @@ export class MapPage {
   }
 
   ionViewDidEnter(){
+    // console.log(document.getElementsByTagName("ion-content")[0]); //Force Ionic to remove the padding around the map
     this.loadMap();
   }
 
   loadMap(){
-
     let latLng = new google.maps.LatLng(38.2137257,-45.099381);
 
     let mapOptions = {
       center: latLng,
       zoom: 4,
-      mapTypeId: google.maps.MapTypeId.HYBRID
+      mapTypeId: google.maps.MapTypeId.HYBRID,
+      disableDefaultUI: true
     }
 
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
