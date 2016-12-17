@@ -16,7 +16,6 @@ export class MapPage {
   }
 
   ionViewDidEnter(){
-    // console.log(document.getElementsByTagName("ion-content")[0]); //Force Ionic to remove the padding around the map
     this.loadMap();
   }
 
