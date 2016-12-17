@@ -27,7 +27,11 @@ export class MapPage {
       center: latLng,
       zoom: 4,
       mapTypeId: google.maps.MapTypeId.HYBRID,
-      disableDefaultUI: true
+      disableDefaultUI: true,
+      zoomControl: true,
+      zoomControlOptions: {
+          position: google.maps.ControlPosition.LEFT_TOP
+      }
     }
 
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
