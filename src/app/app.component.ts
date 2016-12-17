@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { MapPage } from '../pages/map/map';
-
+import { AboutPage } from '../pages/about/about'
 
 @Component({
   templateUrl: 'app.html'
@@ -21,6 +21,7 @@ export class StotvApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Map', component: MapPage },
+      { title: 'About', component: AboutPage }
     ];
 
   }

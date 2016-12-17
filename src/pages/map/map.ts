@@ -26,12 +26,10 @@ export class MapPage {
     let mapOptions = {
       center: latLng,
       zoom: 4,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
+      mapTypeId: google.maps.MapTypeId.HYBRID
     }
 
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-    console.log("Loaded correctly");
-
   }
 
 }

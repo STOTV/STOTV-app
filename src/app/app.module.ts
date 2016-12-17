@@ -2,11 +2,13 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { StotvApp } from './app.component';
 import { MapPage } from '../pages/map/map';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
     StotvApp,
-    MapPage
+    MapPage,
+    AboutPage
   ],
   imports: [
     IonicModule.forRoot(StotvApp)
@@ -14,7 +16,8 @@ import { MapPage } from '../pages/map/map';
   bootstrap: [IonicApp],
   entryComponents: [
     StotvApp,
-    MapPage
+    MapPage,
+    AboutPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
