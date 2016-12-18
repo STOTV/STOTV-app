@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Constants } from "./constants"
 
 /*
   Generated class for the StotvService provider.
@@ -14,7 +15,6 @@ export class StotvService {
   data : any;
 
   constructor(public http: Http) {
-    console.log('Hello StotvService Provider');
   }
 
   load() {
@@ -28,10 +28,9 @@ export class StotvService {
       // We're using Angular HTTP provider to request the data,
       // then on the response, it'll map the JSON data to a parsed JS object.
       // Next, we process the data and resolve the promise with the new data.
-      this.http.get("http://localhost:5000/api/v1/location")
+      this.http.get(Constants.SERVER + "/api/v1/location")
         .map(res => res.json())
         .subscribe(data => {
-          console.log(data);
           // we've got back the raw data, now generate the core schedule data
           // and save the data for later reference
           this.data = data;
